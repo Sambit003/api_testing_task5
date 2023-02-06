@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "api_testing_task5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sambit003/api_testing_task5.git"
+  },
+  "author": "SAMBIT CHAKRABORTY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sambit003/api_testing_task5/issues"
+  },
+  "homepage": "https://github.com/Sambit003/api_testing_task5#readme",
+  "description": ""
+}
