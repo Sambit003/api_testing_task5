@@ -13,13 +13,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const { name, author, price } = req.body;
+  const { id, name, author, description, image, price, category, subcategory, quantity, rating, pages, language, publisher, year, isbn, binding, edition } = req.body;
   let resObj = {};
 
   let array = JSON.parse(fs.readFileSync("books.json", "utf-8"));
 
   // Params Missing Case
-  if (!name || !author || !price) {
+  if (!name || !author || !price  || !category || !subcategory || !quantity || !rating || !pages || !language || !publisher || !year || !isbn || !binding || !edition) {
     resObj = {
       status: "Failed",
       msg: "Parameters Missing",
@@ -42,7 +42,7 @@ app.post("/", (req, res) => {
 
     // Valid Request for Adding a Book
     if (!resObj["status"]) {
-      array.push({ name, author, price });
+      array.push({ id, name, author, description, image, price, category, subcategory, quantity, rating, pages, language, publisher, year, isbn, binding, edition });
       fs.writeFileSync("books.json", JSON.stringify(array));
 
       resObj = {
